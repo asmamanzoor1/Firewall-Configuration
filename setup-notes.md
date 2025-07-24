@@ -16,7 +16,7 @@ The goal was to **allow only SSH (port 22)** for remote access, while **blocking
 
 ### 1. ✅ Update & Install UFW (already installed in Debian)
 
-```bash
+bash
 sudo apt update && sudo apt upgrade
 sudo ufw enable
 If UFW wasn’t already installed, I would’ve done:
@@ -27,8 +27,7 @@ Edit
 sudo apt install ufw
 2. 🔒 Set Firewall Rules
 bash
-Copy
-Edit
+
 sudo ufw allow 22            # Allow SSH (port 22)
 sudo ufw default deny incoming   # Deny all other incoming traffic
 sudo ufw default allow outgoing  # Allow all outgoing traffic
